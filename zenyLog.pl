@@ -5,7 +5,8 @@
 # \___|_| |_| |_|___// |\__,_|___/\__|_|_| |_|
 #                  |__/                       
 #	BECAUSE FARM IS WHAT MATTERS 
-
+# Cria um arquivo zenyLog.txt
+# [DATA] [CHAR] [ZENY/HORA]
 package zenyLog;
  
 use strict;
@@ -37,7 +38,7 @@ my $datestring = localtime();
 
 sub zenyLog {
     my (undef, $args) = @_;
-	my ($endTime_EXP, $w_sec, $zenyPerHour, $zenyMade,);
+	my ($endTime_EXP, $w_sec, $zenyPerHour, $zenyMade);
 	$endTime_EXP = time;
 	$w_sec = int($endTime_EXP - $startTime_EXP);
 		if ($args eq 'output') {
