@@ -24,7 +24,7 @@ my %links = (
 for my $items (keys %links) {
 my $content = get($links{$items});
 defined $content or die "Cannot read '$links{$items}";
-open(my $rtf, '>', $items) or die "não foi possível abrir o arquivo";
+open(my $rtf, '>:encoding(UTF-8)', $items) or die "não foi possível abrir o arquivo";
 
 print $rtf $content;
 print "$items Atualizado \n";
